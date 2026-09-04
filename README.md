@@ -44,6 +44,7 @@ The example illustrates how metadata is queried on database level. It does not i
 You need:
 
 - An archive tool to unizip the iiRDS packages
+- Java 21 or later installed
 - Download of [Apache Jena Fuseki](https://jena.apache.org/download/)
 - Download of the sample iiRDS packages in this repo
 - Download of the [iiRDS schema](https://github.com/iirds-consortium/models/blob/main/iirds-core.rdf)
