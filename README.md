@@ -59,9 +59,9 @@ You need:
    For example, http://localhost:3030
    
 1. In the ***new dataset** tab, enter iirdstest as the name for your dataset.
-2. Select ***In memory***.
-3. Click ***create dataset***.5.
-6. Rename the pi_fan.iirds package to pi_fan.zip.
+1. Select ***In memory***.
+1. Click ***create dataset***.
+1. Rename the pi_fan.iirds package to pi_fan.zip.
 1. Unzip the pi_fan.zip file.
 1. In the Apache Jena Fuseki UI tab of your browser, click **add data**.    
 1. Click **select files**.
