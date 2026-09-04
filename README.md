@@ -4,12 +4,12 @@ This repository contains sample [iiRDS](https://www.iirds.org/) packages and a w
 
 The example follows the scenario from **“Hey, DITA! Talk to me!”**:
 
-- a fictional fan is documented in a DITA-derived iiRDS package
-- a supplier provides a second iiRDS package for the fan’s induction motor
+- A fictional fan is documented in a DITA-derived iiRDS package
+- A supplier provides a second iiRDS package for the fan’s induction motor
 - Apache Jena Fuseki loads the package metadata and the iiRDS ontology
 - SPARQL queries find relevant topics without reading the DITA or HTML content
-- one additional relationship connects the two manufacturers’ component identifiers
-- a property-path query then finds related supplier information
+- One additional relationship connects the two manufacturers’ component identifiers
+- A property-path query then finds related supplier information
 
 The sample is intended for technical writers, information architects, knowledge-modeling practitioners, and developers experimenting with graph-based knowledge hubs that can be used for content delivery portals and retrieval-augmented generation (Graph RAG).
 
@@ -58,9 +58,9 @@ You need:
 
    For example, http://localhost:3030
    
-1. In the ***new dataset** tab, enter iirdstest as the name for your dataset.
-1. Select ***In memory***.
-1. Click ***create dataset***.
+1. In the **new dataset** tab, enter iirdstest as the name for your dataset.
+1. Select **In memory**.
+1. Click **create dataset**.
 1. Rename the pi_fan.iirds package to pi_fan.zip.
 1. Unzip the pi_fan.zip file.
 1. In the Apache Jena Fuseki UI tab of your browser, click **add data**.    
@@ -96,7 +96,7 @@ Requirements:
 - You have succesfully completed "Loading the iiRDS package"
 
 1. In the Apache Jena Fuseki UI tab of your browser, click **query**.
-1. In the input box, enter the following SPARQL query and click ***Run query*** icon on the right. 
+1. In the input box, enter the following SPARQL query and click **Run query** icon on the right. 
 
  ```PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -143,9 +143,9 @@ Requirements:
 - You have succesfully completed "Loading the iiRDS package"
 
 1. In the Apache Jena Fuseki UI tab of your browser, click **edit**.
-1. Click ***list current graphs***.
-1. To select the graph in the list, click ***default***.
-1. In the text editor field of the graph, add the following triple and click ***save***:
+1. Click **list current graphs**.
+1. To select the graph in the list, click **default**.
+1. In the text editor field of the graph, add the following triple and click **save**:
 
 ``` j.0:Drive iirds:has-component <urn:uuid:5428c90e-bfa6-4b3c-9445-515987034bfb> . ```
 
@@ -214,7 +214,7 @@ Requirements:
 - You have succesfully completed "Integrating supplier documentation"
 
 1. In the Apache Jena Fuseki UI tab of your browser, click **query**.
-1. In the input box, enter the following SPARQL query and click ***Run query*** icon on the right. 
+1. In the input box, enter the following SPARQL query and click **Run query** icon on the right. 
 
  ```PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
