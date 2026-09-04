@@ -70,7 +70,7 @@ The metadata of the pi_fan.iirds package is loaded into the FuseKi triple store.
 
 ## Find all topics about the rotor
 Requirements: 
-- You have succesfull completed "Loading the iiRDS package"
+- You have succesfully completed "Loading the iiRDS package"
 
 1. In the Apache Jena Fuseki UI tab of your browser, click **query**.
 1. In the input box, enter the following SPARQL query and click ***Run query*** icon on the right.
@@ -90,7 +90,7 @@ The result table lists all topics that have a relation to the rotor component. T
 
 ## Find all topics about using the PI Fan
 Requirements: 
-- You have succesfull completed "Loading the iiRDS package"
+- You have succesfully completed "Loading the iiRDS package"
 
 1. In the Apache Jena Fuseki UI tab of your browser, click **query**.
 1. In the input box, enter the following SPARQL query and click ***Run query*** icon on the right. 
@@ -111,7 +111,7 @@ The result table lists all topics that are relevant when using the PI fan. The m
 
 ## Adding the iiRDS schema
 Requirements: 
-- You have succesfull completed "Loading the iiRDS package"
+- You have succesfully completed "Loading the iiRDS package"
 
 1. In the Apache Jena Fuseki UI tab of your browser, click **add data**.    
 1. Click **select files**.
@@ -122,7 +122,7 @@ The full iiRDS schema is loaded into the triple store. That allows more sophisti
 
 ## Adding supplier documentation
 Requirements: 
-- You have succesfull completed "Loading the iiRDS package"
+- You have succesfully completed "Loading the iiRDS package"
 
 1. Rename the iiRDS-OT-1769434483100.iirds package to iiRDS-OT-1769434483100.zip.
 1. Unzip the iiRDS-OT-1769434483100.zip file.
@@ -137,7 +137,7 @@ The metadata of the iiRDS-OT-1769434483100.iirds package is loaded into the Fuse
 To integrate the supplier documentation we need to integrate the suppliers component into the component tree of the PI fan.
 
 Requirements: 
-- You have succesfull completed "Loading the iiRDS package"
+- You have succesfully completed "Loading the iiRDS package"
 
 1. In the Apache Jena Fuseki UI tab of your browser, click **edit**.
 1. Click ***list current graphs***.
@@ -150,10 +150,10 @@ Requirements:
 We want to find information that is relevant for the topic "Checking the power supply". Relevant documentation is everything that is about the same livecycle phase of the product and is related to the components in the topic.
 
 Requirements: 
-- You have succesfull completed "Loading the iiRDS package"
-- You have succesfull completed "Adding the iiRDS schema"
-- You have succesfull completed "Adding supplier documentation"
-- You have succesfull completed "Integrating supplier documentation"
+- You have succesfully completed "Loading the iiRDS package"
+- You have succesfully completed "Adding the iiRDS schema"
+- You have succesfully completed "Adding supplier documentation"
+- You have succesfully completed "Integrating supplier documentation"
 
 1. In the Apache Jena Fuseki UI tab of your browser, click **query**.
 1. In the input box, enter the following SPARQL query and click ***Run query*** icon on the right. 
