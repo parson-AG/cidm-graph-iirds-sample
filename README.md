@@ -181,7 +181,7 @@ The result table lists all information units that are related by similar product
 
 - [iiRDS Consortium](https://www.iirds.org/)
 - [iiRDS version 1.2 materials](https://www.iirds.org/materials/version-12)
-- [iiRDS specification]([https://iirds.org/fileadmin/iiRDS_specification/20201103-1.1-release/index.html](https://www.iirds.org/fileadmin/iiRDS_specification/20251103-1.3-release/index.html))
+- [iiRDS specification](https://www.iirds.org/fileadmin/iiRDS_specification/20251103-1.3-release/index.html)
 - [Apache Jena Fuseki quick start](https://jena.apache.org/documentation/fuseki2/fuseki-quick-start.html)
 - [W3C SPARQL 1.1 Query Language](https://www.w3.org/TR/sparql11-query/)
 
