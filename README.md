@@ -11,7 +11,7 @@ The example follows the scenario from **“Hey, DITA! Talk to me!”**:
 - one additional relationship connects the two manufacturers’ component identifiers
 - a property-path query then finds related supplier information
 
-The sample is intended for technical writers, information architects, knowledge-modeling practitioners, and developers experimenting with graph-based knowledge hubs that can be used for retrieval-augmented generation (Graph RAG).
+The sample is intended for technical writers, information architects, knowledge-modeling practitioners, and developers experimenting with graph-based knowledge hubs that can be used for content delivery portals and retrieval-augmented generation (Graph RAG).
 
 ## Repository contents
 
@@ -37,7 +37,7 @@ The example progresses through four increasingly useful graph operations:
 All queries operate on the metadata graph. They do not need to inspect the DITA topics, generated HTML, or supplier PDF to determine which information units are relevant.
 
 ## What does this example not demonstrate
-The example illustrates how metadata is queried on database level. It does not illustrate how graphs are used in content delivery portals. As most content delivery portals are not open-source, we cannot illustrate the benefits for end users in actual content delivery portals. However, the information queried on database level can be used to provide related links in delivery portals or as context for chat bots. For more information about actual projects, see [iiRDS best practice projects](https://www.iirds.org/tools/best-practices).  
+The example illustrates how metadata is queried on database level. It does not illustrate how graphs are used in content delivery portals. As most content delivery portals are not open-source, we cannot illustrate the benefits for end users in actual content delivery portals. However, the information queried on database level can be used to provide related links in delivery portals or as context for chatbots. For more information about actual projects, see [iiRDS best practice projects](https://www.iirds.org/tools/best-practices).  
 
 ## Prerequisites
 
@@ -110,7 +110,7 @@ PREFIX pi: <https://www.i4icm.de/pifan#>
 		  ?topic iirds:title ?title .	}
 ```
 
-The result table lists all topics that are relevant when using the PI fan. The metadata Use was never assigned to a topic and is derived from the more detailed product lifecicle phases that were assigned to the topic. The iiRDS schema does allow to find all topics that are about use due to the class hierarchy. The iiRDS package was build using the [DITA OT iiRDS plugin](https://www.dita-ot.org/plugins/org.iirds.dita.package) which added some schema information about direct parent classes. 
+The result table lists ten topics that are relevant when using the PI fan. The metadata Use was never assigned to a topic and is derived from the more detailed product lifecycle phases that were assigned to the topic. The iiRDS schema does allow to find all topics that are about use due to the class hierarchy. The iiRDS package was built using the [DITA OT iiRDS plugin](https://www.dita-ot.org/plugins/org.iirds.dita.package) which added some schema information about direct parent classes. 
 
 ## Adding the iiRDS schema
 Requirements: 
@@ -134,7 +134,7 @@ Requirements:
 1. In the file picker, select iiRDS-OT-1769434483100/META-INF/metadata.rdf.
 1. Click **upload now**.
 		  
-The metadata of the iiRDS-OT-1769434483100.iirds package is loaded into the FuseKi triple store.
+The metadata of the iiRDS-OT-1769434483100.iirds package is loaded into the Fuseki triple store.
 
 ## Integrating supplier documentation
 To integrate the supplier documentation we need to integrate the suppliers component into the component tree of the PI fan.
@@ -145,9 +145,11 @@ Requirements:
 1. In the Apache Jena Fuseki UI tab of your browser, click **edit**.
 1. Click ***list current graphs***.
 1. To select the graph in the list, click ***default***.
-1. In the text editor field of the graph, add a the following triple and click ***save***:
+1. In the text editor field of the graph, add the following triple and click ***save***:
 
 ``` j.0:Drive iirds:has-component <urn:uuid:5428c90e-bfa6-4b3c-9445-515987034bfb> . ```
+
+The triple is added to the Fuseki triple store and integrates the supplier package into the graph. We can now query all packages.
 
 ## Finding related information for a topic
 We want to find information that is relevant for the topic "Checking the power supply". Relevant documentation is everything that is about the same livecycle phase of the product and is related to the components in the topic.
