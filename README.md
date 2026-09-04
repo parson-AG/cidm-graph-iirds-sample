@@ -179,7 +179,61 @@ PREFIX pi: <https://www.i4icm.de/pifan#>
     	  ?infou iirds:title ?title .
 		}
 ```
-The result table lists all information units that are related by similar product lifecycle phases and components. The components relation anticipates part-of relations. The results find the supplier document as it is about a part of the drive which is relevant for checking the power supply as there could be a problem with the wiring.
+The result table lists the supplier document which is related to the topic by similar product lifecycle phases and the component relation. The components' relation anticipates part-of relations. The results find the supplier document as it is about a part of the drive which is relevant for checking the power supply as there could be a problem with the wiring.
+
+## Add RDFS inference (advanced)
+We want to configure Fuseki to allow basic inference. Inference allows to generate information out of the schema, for example to find all subclasses while querying a parent class.
+
+1. In the Apache Fuseki installation folder, go to run/configuration.
+1. Open the ttl file that is named after your dataset.
+1. Replace the last line with the following snippet and restart the server:
+
+```:dataset  rdf:type  ja:RDFDataset ;
+		ja:defaultGraph :model_inf .
+
+# The inference model
+:model_inf a ja:InfModel ;
+     ja:baseModel :baseModel ;
+     ja:reasoner [
+         # ja:reasonerURL <http://jena.hpl.hp.com/2003/OWLFBRuleReasoner>
+         # For RDFS: use this instead:
+         ja:reasonerURL <http://jena.hpl.hp.com/2003/RDFSExptRuleReasoner>
+     ] .
+
+:baseModel a ja:MemoryModel .
+```
+ Fuseki is configured to use reaseoners to infer new triples.
+
+ ## Finding related information for a topic with inference (advanced)
+We want to find information that is relevant for the topic "Checking the power supply". Relevant documentation is everything that is about the same lifecycle phase of the product and is related to the components in the topic.
+
+Requirements: 
+- You have succesfully completed "Loading the iiRDS package"
+- You have succesfully completed "Adding the iiRDS schema"
+- You have succesfully completed "Adding supplier documentation"
+- You have succesfully completed "Integrating supplier documentation"
+
+1. In the Apache Jena Fuseki UI tab of your browser, click **query**.
+1. In the input box, enter the following SPARQL query and click ***Run query*** icon on the right. 
+
+ ```PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX iirds: <http://iirds.tekom.de/iirds#>
+PREFIX pi: <https://www.i4icm.de/pifan#>
+
+	SELECT DISTINCT ?infou ?comp ?title ?lph
+	WHERE
+		{ ?topic iirds:title "Checking the power supply" .	
+		  ?topic iirds:relates-to-component	?comp .
+  		  ?topic iirds:relates-to-product-lifecycle-phase	?lph .
+  		  ?infou rdf:type iirds:InformationUnit .
+  		  ?infou iirds:relates-to-product-lifecycle-phase	?lph .
+  	      ?infou (iirds:relates-to-component|^iirds:has-component)+ ?comp .
+    	  ?infou iirds:title ?title .
+		}
+```
+The result table lists all information units that are related by similar product lifecycle phases and components. The components' relation anticipates part-of relations. The results find the supplier document as it is about a part of the drive which is relevant for checking the power supply as there could be a problem with the wiring.
+ 
 
 
 ## Related resources
