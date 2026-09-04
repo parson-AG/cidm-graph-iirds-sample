@@ -207,10 +207,10 @@ We want to configure Fuseki to allow basic inference. Inference allows to genera
 
 :baseModel a ja:MemoryModel .
 ```
- Fuseki is configured to use reaseoners to infer new triples.
+ Fuseki is configured to use reasoners to infer new triples. The restart reset the in-memory database.
 
  ## Finding related information for a topic with inference (advanced)
-We want to find information that is relevant for the topic "Checking the power supply". Relevant documentation is everything that is about the same lifecycle phase of the product and is related to the components in the topic.
+We want to find information that is relevant for the topic "Checking the power supply". Relevant documentation is everything that is about the same lifecycle phase of the product and is related to the components in the topic. We need to re-upload the rdf files and add the integration triple after the re-start of the server.
 
 Requirements: 
 - You have succesfully completed "Loading the iiRDS package"
@@ -238,7 +238,7 @@ PREFIX pi: <https://www.i4icm.de/pifan#>
     	  ?infou iirds:title ?title .
 		}
 ```
-The result table lists all information units that are related by similar product lifecycle phases and components. The components' relation anticipates part-of relations. The results find the supplier document as it is about a part of the drive which is relevant for checking the power supply as there could be a problem with the wiring.
+The reasoner finds all resources that are information units or instances in subclasses of information unit.  The result table lists all information units that are related by similar product lifecycle phases and components. The components' relation anticipates part-of relations. The results find the supplier document as it is about a part of the drive which is relevant for checking the power supply as there could be a problem with the wiring. 
  
 
 
