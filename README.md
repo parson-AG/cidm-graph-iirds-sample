@@ -188,7 +188,8 @@ We want to configure Fuseki to allow basic inference. Inference allows to genera
 1. Open the ttl file that is named after your dataset.
 1. Replace the last line with the following snippet and restart the server:
 
-```:dataset  rdf:type  ja:RDFDataset ;
+```
+:dataset  rdf:type  ja:RDFDataset ;
 		ja:defaultGraph :model_inf .
 
 # The inference model
