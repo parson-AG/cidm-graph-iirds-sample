@@ -37,7 +37,7 @@ The example progresses through four increasingly useful graph operations:
 All queries operate on the metadata graph. They do not need to inspect the DITA topics, generated HTML, or supplier PDF to determine which information units are relevant.
 
 ## What does this example not demonstrate
-The example illustrates how metadata is queried on database level. It does not illustrate how graphs are used in content delivery portals. As most content delivery portals are not open-source, we cannot illsutrate the benefits for end users of documentation. For more information about actual projects, see [iiRDS best practice projects](https://www.iirds.org/tools/best-practices).  
+The example illustrates how metadata is queried on database level. It does not illustrate how graphs are used in content delivery portals. As most content delivery portals are not open-source, we cannot illustrate the benefits for end users in actual content delivery portals. However, the information queried on database level can be used to provide related links in delivery portals or as context for chat bots. For more information about actual projects, see [iiRDS best practice projects](https://www.iirds.org/tools/best-practices).  
 
 ## Prerequisites
 
