@@ -68,7 +68,7 @@ You need:
 1. In the file picker, select pi_fan/META-INF/metadata.rdf.
 1. Click **upload now**.
 
-The metadata of the pi_fan.iirds package is loaded into the FuseKi triple store.
+The metadata of the pi_fan.iirds package is loaded into the Fuseki triple store.
 
 
 ## Find all topics about the rotor
