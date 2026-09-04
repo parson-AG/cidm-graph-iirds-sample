@@ -78,7 +78,8 @@ Requirements:
 1. In the Apache Jena Fuseki UI tab of your browser, click **query**.
 1. In the input box, enter the following SPARQL query and click ***Run query*** icon on the right.
 
-```PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+```
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX iirds: <http://iirds.tekom.de/iirds#>
 PREFIX pi: <https://www.i4icm.de/pifan#>
@@ -98,7 +99,8 @@ Requirements:
 1. In the Apache Jena Fuseki UI tab of your browser, click **query**.
 1. In the input box, enter the following SPARQL query and click **Run query** icon on the right. 
 
- ```PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+ ```
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX iirds: <http://iirds.tekom.de/iirds#>
 PREFIX pi: <https://www.i4icm.de/pifan#>
@@ -163,7 +165,8 @@ Requirements:
 1. In the Apache Jena Fuseki UI tab of your browser, click **query**.
 1. In the input box, enter the following SPARQL query and click ***Run query*** icon on the right. 
 
- ```PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+ ```
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX iirds: <http://iirds.tekom.de/iirds#>
 PREFIX pi: <https://www.i4icm.de/pifan#>
@@ -217,7 +220,8 @@ Requirements:
 1. In the Apache Jena Fuseki UI tab of your browser, click **query**.
 1. In the input box, enter the following SPARQL query and click **Run query** icon on the right. 
 
- ```PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+ ```
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX iirds: <http://iirds.tekom.de/iirds#>
 PREFIX pi: <https://www.i4icm.de/pifan#>
