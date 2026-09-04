@@ -88,7 +88,7 @@ PREFIX pi: <https://www.i4icm.de/pifan#>
 		{ ?topic iirds:relates-to-component <https://www.i4icm.de/pifan#Rotor> . 
 		  ?topic iirds:title ?title .	}
 ```
-The result table lists all topics that have a relation to the rotor component. The authro assigned the metadata rotor to the topic.
+The result table lists two topics that have a relation to the rotor component. The author assigned the metadata rotor to the topic.
  
 
 ## Find all topics about using the PI Fan
