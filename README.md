@@ -152,7 +152,7 @@ Requirements:
 The triple is added to the Fuseki triple store and integrates the supplier package into the graph. We can now query all packages.
 
 ## Finding related information for a topic
-We want to find information that is relevant for the topic "Checking the power supply". Relevant documentation is everything that is about the same livecycle phase of the product and is related to the components in the topic.
+We want to find information that is relevant for the topic "Checking the power supply". Relevant documentation is everything that is about the same lifecycle phase of the product and is related to the components in the topic.
 
 Requirements: 
 - You have succesfully completed "Loading the iiRDS package"
@@ -173,7 +173,7 @@ PREFIX pi: <https://www.i4icm.de/pifan#>
 		{ ?topic iirds:title "Checking the power supply" .	
 		  ?topic iirds:relates-to-component	?comp .
   		  ?topic iirds:relates-to-product-lifecycle-phase	?lph .
-  		  ?infou rdf:type iirds:InformationUnit .
+  		  ?infou rdf:type iirds:Document .
   		  ?infou iirds:relates-to-product-lifecycle-phase	?lph .
   	      ?infou (iirds:relates-to-component|^iirds:has-component)+ ?comp .
     	  ?infou iirds:title ?title .
